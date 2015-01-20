@@ -1,0 +1,9 @@
+{% if prices %}
+	<ul>
+	{% for p in prices %}
+		<li><a href="/price/{{p.ccode}}">{{p.ccode}}</a></li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No Prices are available.</p>
+{% endif %}
