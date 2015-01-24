@@ -3,14 +3,15 @@ from django.db import models
 # Create your models here.
 class Price(models.Model):
 	ccode      = models.IntegerField(primary_key=True)
-	date       = models.DateField()
-	open       = models.DecimalField(max_digits=10, decimal_places=2)
-	high       = models.DecimalField(max_digits=10, decimal_places=2)
-	low        = models.DecimalField(max_digits=10, decimal_places=2)
-	close      = models.DecimalField(max_digits=10, decimal_places=2)
-	volume     = models.DecimalField(max_digits=10, decimal_places=2)
-	created_at = models.DateTimeField()
-	updated_at = models.DateTimeField()
+	date       = models.DateField(primary_key=True)
+	#open       = models.FloatField()
+	#high       = models.FloatField()
+	#low        = models.FloatField()
+	#close      = models.FloatField()
+	#volume     = models.FloatField()
+	#created_at = models.DateTimeField()
+	#updated_at = models.DateTimeField()
 
 	class Meta:
-		db_table = 'price'
+		managed = False
+		db_table = 'prices'
