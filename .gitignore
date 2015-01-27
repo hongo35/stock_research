@@ -1,2 +1,5 @@
+Capfile
+config
+lib
 log/*
 stock_research/settings.*
