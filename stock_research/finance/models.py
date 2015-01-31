@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Finances(models.Model):
+class Finance(models.Model):
 	ccode = models.IntegerField(primary_key=True)
 	market_cap = models.FloatField()
 	shares_issued = models.FloatField()
