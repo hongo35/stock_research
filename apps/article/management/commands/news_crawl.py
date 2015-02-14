@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.core.management.base import BaseCommand
-from stock_research.article.models import Article
+from django.conf import settings
+from article.models import Article
+
 import requests
 import datetime
 from bs4 import BeautifulSoup
@@ -8,7 +10,7 @@ from bs4 import BeautifulSoup
 class Command(BaseCommand):
 	help = "[Description] Here is help..."
 
-	def handle(self,*args, **options):
+	def handle(self, *args, **options):
 		res = requests.get("http://news.yahoo.co.jp/hl?c=biz")
 		soup = BeautifulSoup(res.text)
 
